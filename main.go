@@ -39,6 +39,11 @@ func FCT(x int, n int) int {
     return FCT(x*(n-1), n-1)
 }
 
+func Factiorial(n int) int {
+    if (n == 0) { return 1 }
+    return n * Factiorial(n-1)
+}
+
 func main() {
     // GCD
     fmt.Print("Greatest common divisor for 10 and 4: ")
@@ -59,5 +64,9 @@ func main() {
     // FCT 
     fmt.Print("Factorial of 6 is: " )
     fmt.Println(FCT(6,6))
+
+    // Factorial
+    fmt.Print("Factiorial of 6 is still: ")
+    fmt.Println(Factiorial(6))
 }
 
