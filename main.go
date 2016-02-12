@@ -30,42 +30,34 @@ func PWR(x int, x1 int, n int) int {
     return PWR(x1*x, x1, n-1)
 }
 
+// Factorial
+func FCT(x int, n int) int {
+    if (n == 1) { return x }
+    if (x == 0) { return 1 }
+    fmt.Print(x)
+    fmt.Print(" ")
+    return FCT(x*(n-1), n-1)
+}
+
 func main() {
     // GCD
-    var a int = 10
-    var b int = 4
-    var result = GCD(a, b)
-    fmt.Print("result of GCD of ")
-    fmt.Print(a)
-    fmt.Print(" and ")
-    fmt.Print(b)
-    fmt.Print(": ")
-    fmt.Println(result)
+    fmt.Print("Greatest common divisor for 10 and 4: ")
+    fmt.Println(GCD(10, 4))
+
 
     // FBN
-    var n = 5
-    fmt.Print("first ")
-    fmt.Print(n)
-    fmt.Print(" of Fibonacci numbers: ")
-    result = FBN(n, 1, 1)
-    fmt.Println(result)
+    fmt.Print("first 5 Fibonacci numbers: ")
+    fmt.Println(FBN(5, 1, 1))
 
     // PWR
-    n = 1
-    var x int = 3
-    fmt.Print(x)
-    fmt.Print(" to the power of ")
-    fmt.Print(n)
-    fmt.Print(": ")
-    result = PWR(x, x, n)
-    fmt.Println(result)
-    //var result2 int = PWR(3, 3, 4)
-    n = 4
-    fmt.Print(x)
-    fmt.Print(" to the power of ")
-    fmt.Print(n)
-    fmt.Print(": ")
-    result = PWR(x, x, n)
-    fmt.Println(result)
+    fmt.Print("3 to the power of 1: ")
+    fmt.Println(PWR(3, 3, 1))
+
+    fmt.Print("4 to the power of 3: ")
+    fmt.Println(PWR(4, 4, 3))
+
+    // FCT 
+    fmt.Print("Factorial of 6 is: " )
+    fmt.Println(FCT(6,6))
 }
 
