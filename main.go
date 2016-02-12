@@ -21,6 +21,15 @@ func FBN(n int, pn1 int, pn2 int) int {
     return FBN(n-1, pn2, (pn1+pn2))
 }
 
+// Power to
+func PWR(x int, x1 int, n int) int {
+    if (n == 1) { 
+        return x }
+    fmt.Print(x)
+    fmt.Print(" ")
+    return PWR(x1*x, x1, n-1)
+}
+
 func main() {
     // GCD
     var a int = 10
@@ -37,8 +46,26 @@ func main() {
     var n = 5
     fmt.Print("first ")
     fmt.Print(n)
-    fmt.Print(" of Fibonacci numbers:  ")
-    result = FBN(5, 1, 1)
+    fmt.Print(" of Fibonacci numbers: ")
+    result = FBN(n, 1, 1)
+    fmt.Println(result)
+
+    // PWR
+    n = 1
+    var x int = 3
+    fmt.Print(x)
+    fmt.Print(" to the power of ")
+    fmt.Print(n)
+    fmt.Print(": ")
+    result = PWR(x, x, n)
+    fmt.Println(result)
+    //var result2 int = PWR(3, 3, 4)
+    n = 4
+    fmt.Print(x)
+    fmt.Print(" to the power of ")
+    fmt.Print(n)
+    fmt.Print(": ")
+    result = PWR(x, x, n)
     fmt.Println(result)
 }
 
