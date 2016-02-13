@@ -50,6 +50,15 @@ func Multiply(a int, b int) int {
     return a * Multiply(1, b)
 }
 
+// Print from 0 to n
+func PrintFromZeroToN(n int) int {
+    if(n == 0) { return n }
+    var x int = PrintFromZeroToN(n-1)
+    fmt.Print(x)
+    fmt.Print(" ")
+    return n 
+}
+
 func main() {
     // GCD
     fmt.Print("Greatest common divisor for 10 and 4: ")
@@ -78,5 +87,9 @@ func main() {
     // Multiply
     fmt.Print("Multiply 4 and 5: ")
     fmt.Println(Multiply(4, 5))
+
+    // Print from 0 to n
+    fmt.Print("Print from 0 to 10: ")
+    fmt.Println(PrintFromZeroToN(10))
 }
 
