@@ -39,9 +39,15 @@ func FCT(x int, n int) int {
     return FCT(x*(n-1), n-1)
 }
 
-func Factiorial(n int) int {
+func Factorial(n int) int {
     if (n == 0) { return 1 }
-    return n * Factiorial(n-1)
+    return n * Factorial(n-1)
+}
+
+// Multiply
+func Multiply(a int, b int) int {
+    if (a == 1) { return b }
+    return a * Multiply(1, b)
 }
 
 func main() {
@@ -67,6 +73,10 @@ func main() {
 
     // Factorial
     fmt.Print("Factiorial of 6 is still: ")
-    fmt.Println(Factiorial(6))
+    fmt.Println(Factorial(6))
+
+    // Multiply
+    fmt.Print("Multiply 4 and 5: ")
+    fmt.Println(Multiply(4, 5))
 }
 
